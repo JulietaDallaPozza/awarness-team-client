@@ -10,6 +10,7 @@ function SignupPage(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
+    const [userType, setUserType] = useState("");
     const [errorMessage, setErrorMessage] = useState(undefined);
 
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ function SignupPage(props) {
     const handleSignupSubmit = (e) => {
         e.preventDefault();
         // Create an object representing the request body
-        const requestBody = { email, password, name };
+        const requestBody = { email, password, name, userType };
 
         // Make an axios request to the API
         // If the POST request is a successful redirect to the login page
@@ -32,10 +33,16 @@ function SignupPage(props) {
                 navigate('/login');
             })
             .catch((error) => {
+                console.log(error)
                 const errorDescription = error.response.data.message;
                 setErrorMessage(errorDescription);
             })
     };
+
+    const handleUserType = (e) => {
+        setUserType(e.target.value);
+    };
+    console.log(userType)
 
     return (
         <div className="SignupPage">
@@ -65,6 +72,25 @@ function SignupPage(props) {
                     value={name}
                     onChange={handleName}
                 />
+                <input
+                    type="radio"
+                    id="awarenessPartner"
+                    name="userType"
+                    value="Awareness"
+                    onChange={handleUserType}
+                />
+                <label htmlFor="awarenessPartner">Awareness Partner</label>
+
+                <br />
+                <input
+                    type="radio"
+                    id="partyEvent"
+                    name="userType"
+                    value="Event"
+                    onChange={handleUserType}
+                />
+                <label htmlFor="partyEvent">Party Event</label>
+                <br />
 
                 <button type="submit">Sign Up</button>
             </form>

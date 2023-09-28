@@ -4,9 +4,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
+// import IsPrivate from "./components/IsPrivate";
+import IsAnon from "./components/IsAnon";
 
 function App() {
   return (
@@ -17,11 +20,14 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {/* <Route path="/signup" element={<IsAnon> <SignupPage /> </IsAnon>} /> */}
         <Route path="/signup" element={<SignupPage />} />
+        {/* <Route path="/login" element={<IsAnon> <LoginPage /> </IsAnon>} /> */}
         <Route path="/login" element={<LoginPage />} />
 
       </Routes>
 
+      <Footer />
     </div>
   );
 }

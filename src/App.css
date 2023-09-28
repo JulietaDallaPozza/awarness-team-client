@@ -1,7 +1,48 @@
-#root {
+* {
+  background-color: #eaced9;
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Dela Gothic One', cursive;
+  color: red;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+      margin: 4em;
+}
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+} */
+
+/* FOOTER */
+
+footer {
+  background-color: red;
+  padding: 2px 0;
+  flex-shrink: 0;
+  position: absolute;
+    text-align: center;
+  bottom: 0;
+  width: 100%;
 }
 
+.columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.columns div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+} 
