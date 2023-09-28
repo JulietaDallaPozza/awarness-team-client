@@ -1,9 +1,8 @@
-// src/pages/LoginPage.jsx
 
-import { useState, useContext } from "react"; // <== IMPORT useContext
+import { useState, useContext } from "react"; 
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/auth.context";  // <== IMPORT
+import { AuthContext } from "../context/auth.context";  
 
 const API_URL = "http://localhost:5005";
 
@@ -38,8 +37,14 @@ function LoginPage(props) {
             .catch((error) => {
                 const errorDescription = error.response.data.message;
                 setErrorMessage(errorDescription);
+                // console.log(errorDescription)
+
             })
+
     };
+
+
+
 
     return (
         <div className="LoginPage">

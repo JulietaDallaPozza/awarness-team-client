@@ -76,7 +76,6 @@ function SignupPage(props) {
                     id="awarenessPartner"
                     name="userType"
                     value="Awareness"
-                    // checked={false}
                     onChange={handleUserType}
                 />
                 <label htmlFor="awarenessPartner">Awareness Partner</label>
@@ -87,7 +86,6 @@ function SignupPage(props) {
                     id="partyEvent"
                     name="userType"
                     value="Event"
-                    // checked={false}
                     onChange={handleUserType}
                 />
                 <label htmlFor="partyEvent">Party Event</label>

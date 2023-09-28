@@ -4,10 +4,11 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
-import IsPrivate from "./components/IsPrivate";
+// import IsPrivate from "./components/IsPrivate";
 import IsAnon from "./components/IsAnon";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
       </Routes>
 
+      {/* <Footer /> */}
     </div>
   );
 }

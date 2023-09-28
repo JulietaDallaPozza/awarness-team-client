@@ -18,8 +18,8 @@ function Navbar() {
 
             {isLoggedIn && (
                 <>
-                    <Link to="/projects">
-                        <button>Projects</button>
+                    <Link to="/Events">
+                        <button>Events</button>
                     </Link>
 
                 
