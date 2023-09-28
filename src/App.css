@@ -3,7 +3,6 @@
   font-family: 'Bebas Neue', sans-serif;
   font-family: 'Dela Gothic One', cursive;
   color: red;
-  /* font-family: 'Mooli', sans-serif; */
 }
 
 
@@ -25,7 +24,7 @@ body {
 } */
 
 /* FOOTER */
-
+/* 
 footer {
   background-color: red;
   padding: 2px 0;
@@ -45,6 +44,5 @@ footer {
 .columns div {
   flex: 1;
   text-align: center;
-  /* border-top: 1px solid #fff; */
   padding: 10px;
-}
+} */
