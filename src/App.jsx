@@ -10,6 +10,7 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 // import IsPrivate from "./components/IsPrivate";
 import IsAnon from "./components/IsAnon";
+import Events from "./pages/Events";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         {/* <Route path="/login" element={<IsAnon> <LoginPage /> </IsAnon>} /> */}
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/events" element={<Events />} />
+        
 
       </Routes>
 
