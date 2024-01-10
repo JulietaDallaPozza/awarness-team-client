@@ -28,15 +28,39 @@ function SignupPage(props) {
         // Make an axios request to the API
         // If the POST request is a successful redirect to the login page
         // If the request resolves with an error, set the error message in the state
+        console.log("Request Body:", requestBody);
+
         axios.post(`${API_URL}/auth/signup`, requestBody)
             .then((response) => {
+                console.log("Response:", response);
                 navigate('/login');
             })
+            // .catch((error) => {
+            //     console.log(error)
+            //     console.log(error.response);
+
+            //     const errorDescription = error.response.data.message;
+            //     setErrorMessage(errorDescription);
+            // })
             .catch((error) => {
-                console.log(error)
-                const errorDescription = error.response.data.message;
-                setErrorMessage(errorDescription);
-            })
+                console.log("Error:", error);
+
+                if (error.response) {
+                    // The request was made and the server responded with a status code
+                    // that falls out of the range of 2xx
+                    const errorDescription = error.response.data?.message || "An error occurred";
+                    setErrorMessage(errorDescription);
+                } else if (error.request) {
+                    // The request was made but no response was received
+                    console.log(error.request);
+                } else {
+                    // Something happened in setting up the request that triggered an Error
+                    console.log('Error', error.message);
+                }
+            });
+
+
+
     };
 
     const handleUserType = (e) => {
