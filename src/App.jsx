@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
-// import IsPrivate from "./components/IsPrivate";
+import IsPrivate from "./components/IsPrivate";
 import IsAnon from "./components/IsAnon";
 import Events from "./pages/Events";
 
